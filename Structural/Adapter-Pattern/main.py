@@ -6,6 +6,7 @@ class CelsiusTemperatureSensor:
     def get_temperature(self):
         return self.temperature
 
+
 # Define the FahrenheitTemperatureSensor class
 class FahrenheitTemperatureSensor:
     def __init__(self, temperature):
@@ -13,6 +14,7 @@ class FahrenheitTemperatureSensor:
 
     def get_temperature(self):
         return self.temperature
+
 
 # Define the Adapter class
 class TemperatureSensorAdapter:
@@ -22,6 +24,7 @@ class TemperatureSensorAdapter:
     def get_temperature(self):
         temperature_in_fahrenheit = self.fahrenheit_sensor.get_temperature()
         return (temperature_in_fahrenheit - 32) * 5 / 9
+
 
 # Demonstration
 if __name__ == "__main__":
